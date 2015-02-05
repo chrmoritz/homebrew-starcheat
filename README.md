@@ -1,6 +1,6 @@
 Homebrew-StarCheat
 ==================
-This repo is a tab for homebrew containing a formula for [StarCheat](wizzomafizzo/starcheat)
+This repo is a tab for homebrew containing a formula for [StarCheat](https://github.com/wizzomafizzo/starcheat)
 
 How to use
 ----------
