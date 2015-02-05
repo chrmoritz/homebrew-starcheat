@@ -1,16 +1,8 @@
-class GitSubmoduleDownloadStrategy < GitDownloadStrategy
-  def update_submodules
-    quiet_safe_system "git", "submodule", "sync", "--recursive"
-    super
-  end
-end
-
 class Starcheat < Formula
   homepage "https://github.com/wizzomafizzo/starcheat"
-  url "https://github.com/wizzomafizzo/starcheat.git", :tag => "0.18.1", :using => GitSubmoduleDownloadStrategy
+  url "https://github.com/wizzomafizzo/starcheat.git", :tag => "0.19"
 
-  head "https://github.com/wizzomafizzo/starcheat.git", :branch => "dev", :using => GitSubmoduleDownloadStrategy
-
+  head "https://github.com/wizzomafizzo/starcheat.git", :branch => "dev"
   depends_on :python3
   depends_on "pyqt5"
 
