@@ -21,7 +21,7 @@ class Starcheat < Formula
       cp "mac/icon.icns", prefix/"StarCheat.app/Contents/Resources"
       (prefix/"StarCheat.app/Contents/MacOS/starcheat").write <<-EOS.undent
         #!
-        /usr/local/opt/python3/bin/python3 /usr/local/opt/starcheat/bin/starcheat $1
+        #{Formula["python3"].opt_bin}/python3 #{opt_bin}/starcheat $1
       EOS
       chmod 0755, prefix/"StarCheat.app/Contents/MacOS/starcheat"
       (prefix/"StarCheat.app/Contents/Info.plist").write <<-EOS.undent
@@ -74,5 +74,5 @@ class Starcheat < Formula
       or just run if from:
         #{prefix}/StarCheat.app
     EOS
-  end
+  end if build.with? "app"
 end
