@@ -1,7 +1,7 @@
 class Starcheat < Formula
   homepage "https://github.com/wizzomafizzo/starcheat"
-  url "https://github.com/wizzomafizzo/starcheat.git", :tag => "0.24",
-    :revision => "4000bc81d472d75134b410fe96a6233f77603a5d"
+  url "https://github.com/wizzomafizzo/starcheat.git", :tag => "0.25",
+    :revision => "43e1c0f75ded92b397b78dcdf440e09d9b02fccb"
 
   head "https://github.com/wizzomafizzo/starcheat.git", :branch => "dev"
   depends_on :python3
