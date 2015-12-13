@@ -1,6 +1,6 @@
 class Starcheat < Formula
   homepage "https://github.com/wizzomafizzo/starcheat"
-  url "https://github.com/wizzomafizzo/starcheat.git", :tag => "0.26",
+  url "https://github.com/wizzomafizzo/starcheat.git", :tag => "0.27",
     :revision => "dbdc26f6400de6f0b557c4cf99193cf92039bd93"
 
   head "https://github.com/wizzomafizzo/starcheat.git", :branch => "dev"
