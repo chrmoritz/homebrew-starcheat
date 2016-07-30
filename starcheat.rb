@@ -1,13 +1,20 @@
 class Starcheat < Formula
+  desc "Starbound player save file editor"
   homepage "https://github.com/wizzomafizzo/starcheat"
-  url "https://github.com/wizzomafizzo/starcheat.git", :tag => "0.27.1",
-    :revision => "17dd471bc223d5c8a1a74f1e4a2eee035246ce36"
-
+  url "https://github.com/wizzomafizzo/starcheat.git",
+      :tag => "0.27.1",
+      :revision => "17dd471bc223d5c8a1a74f1e4a2eee035246ce36"
   head "https://github.com/wizzomafizzo/starcheat.git", :branch => "dev"
-  depends_on :python3
-  depends_on "pyqt5"
+
+  devel do
+    url "https://github.com/medeor413/starcheat.git"
+    version "1.0"
+  end
 
   option "without-app", "Build without the .app (started via starcheat terminal command)"
+
+  depends_on :python3
+  depends_on "pyqt5"
 
   def install
     ENV["PYTHONPATH"] = lib/"python#{/\d\.\d/.match `python3 --version 2>&1`}/site-packages"
@@ -62,12 +69,6 @@ class Starcheat < Formula
     end
   end
 
-  test do
-    ENV["HOME"] = nil
-    system bin/"starcheat", "-v"
-    system prefix/"StarCheat.app/Contents/MacOS/starcheat", "-v" if build.with? "app"
-  end
-
   def caveats
     <<-EOS.undent
       You can run this to symlink the StarCheat.app into your Application folder:
@@ -76,4 +77,10 @@ class Starcheat < Formula
         #{prefix}/StarCheat.app
     EOS
   end if build.with? "app"
+
+  test do
+    ENV["HOME"] = nil
+    system bin/"starcheat", "-v"
+    system prefix/"StarCheat.app/Contents/MacOS/starcheat", "-v" if build.with? "app"
+  end
 end
