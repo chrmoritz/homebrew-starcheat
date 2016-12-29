@@ -15,6 +15,7 @@ class Starcheat < Formula
 
   depends_on :python3
   depends_on "pyqt5"
+  depends_on "jpeg"
 
   def install
     ENV["PYTHONPATH"] = lib/"python#{/\d\.\d/.match `python3 --version 2>&1`}/site-packages"
