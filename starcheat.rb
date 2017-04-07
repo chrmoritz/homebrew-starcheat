@@ -14,7 +14,7 @@ class Starcheat < Formula
   option "without-app", "Build without the .app (started via starcheat terminal command)"
 
   depends_on :python3
-  depends_on "pyqt5"
+  depends_on "pyqt"
   depends_on "jpeg"
 
   def install
