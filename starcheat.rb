@@ -13,7 +13,7 @@ class Starcheat < Formula
 
   option "without-app", "Build without the .app (started via starcheat terminal command)"
 
-  depends_on "python3"
+  depends_on "python"
   depends_on "pyqt"
   depends_on "jpeg"
 
@@ -30,7 +30,7 @@ class Starcheat < Formula
       cp "mac/icon.icns", prefix/"StarCheat.app/Contents/Resources"
       (prefix/"StarCheat.app/Contents/MacOS/starcheat").write <<-EOS.undent
         #!
-        #{Formula["python3"].opt_bin}/python3 #{opt_bin}/starcheat $1
+        #{Formula["python"].opt_bin}/python3 #{opt_bin}/starcheat $1
       EOS
       chmod 0755, prefix/"StarCheat.app/Contents/MacOS/starcheat"
       (prefix/"StarCheat.app/Contents/Info.plist").write <<-EOS.undent
