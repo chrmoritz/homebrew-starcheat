@@ -2,15 +2,10 @@ class Starcheat < Formula
   include Language::Python::Virtualenv
   desc "Starbound player save file editor"
   homepage "https://github.com/wizzomafizzo/starcheat"
-  url "https://github.com/wizzomafizzo/starcheat.git",
-      :tag      => "0.27.1",
-      :revision => "17dd471bc223d5c8a1a74f1e4a2eee035246ce36"
+  url "https://github.com/medeor413/starcheat.git",
+      :revision => "4994d3f8d9a254c8a762983424066915b326450c"
+  version "1.0"
   head "https://github.com/wizzomafizzo/starcheat.git", :branch => "dev"
-
-  devel do
-    url "https://github.com/medeor413/starcheat.git"
-    version "1.0"
-  end
 
   depends_on "freetype"
   depends_on "jpeg"
